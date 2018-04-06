@@ -39,25 +39,79 @@
 \vspace*{2pt}
 \hfil \Large{\emph{Mérés dátuma:} 2018.03.22.}\hfil \\
 \vspace*{2pt}
-\hfil \hspace*{45pt} \Large{\emph{Mérés vezetője:} Pávó Gyula}\hfil
+\hfil \Large{\emph{Mérés vezetője:} Pávó Gyula}\hfil \\
+\vspace*{2pt}
+\hfil \hspace*{45pt} \Large{\emph{Mérőtársak:} Szigeti Balázs, Szűcs Bálint}\hfil
 \thispagestyle{empty}
 \end{titlepage}
 
+
+\section{Bevezetés}
+
+A magfizikai kutatásokban és az izotóptechnikában fontos szerepet játszanak a különböző sugárzások. Ezek detektálásával és az energiaspektrumaik felvételével az adott kísérlet szempontjából lényeges információkhoz lehet jutni. A három féle radioaktív sugárzás közül (alfa,béta,gamma), a béta és a gamma sugárzások vizsgálata a legfontosabb. A béta sugárzás elektronokból vagy pozitronokból áll és töltött részecskenyalábhoz híven vastagabb anyag akár több réteg papír is már elnyeli. A gamma sugárzás nagy energiájú semleges fotonokból áll így ezeket nehéz leárnyékolni. Az utóbb említett két különböző sugárzás, tulajdonságainál fogva eltérő detektálási módszert, eltérő detektort kíván. Jelen mérésünkben energia szelektív számlálótípusú szcintillációs számlálót és félvezető detektort alklamazunk az energia spektrumok felvételére.\newline
+Jelen mérésünk célja, hogy megismerkedjünk a gamma és béta spektroszkópia módszereivel, kísérleti analízisével.
+\newpage
+\subsection{Feladat kiosztás}
+\begin{itemize}
+\item Csörnyei Géza : Gamma spektroszkópia
+\item Szigeti Balázs : Béta spektroszkópia
+\item Szűcs Bálint : Szöveges kidolgozás
+\end{itemize}
+\subsection{Gamma spektroszkópiához használt mérőlánc beállítása}
+\begin{itemize}
+\item Detektor: 
+Gamma gyártmányú, ND-305/g típusú, 80049 gyári számú mérõfej, gamma szcintillátorral.
+\item Nagyfesz: NB 215.2 1000 V
+\item Mérõlánc:
+A rack jobb szélén lévõ, Canberra gyártmányú, 2012 típusú spektroszkópiaia erõsítõ; 
+negatív bemeneti polaritás, (4*6,0) erõsítés, unip. kimenet.
+\item Analizátor:
+Atomki gyártmányú, PalmtopMCA típusú analizátor; 
+512 csatorna.
+\end{itemize}
+\subsection{HPG mérőlánc beállítása}
+A Debrecenből - javításként kapott - PalmtopMCA mérés beállítása: \begin{itemize}
+\item Tc 241: 
+10*7,0 erősítés, + bemenet, P/z állás, unipol kimenet. Így a teteje 3,78 MeV
+\end{itemize}
+A (korábbi) átállítás időpontja ismeretlen.
+\begin{itemize}
+\item 935 ADC: 
+10 V, inp. bemenet; 
+\begin{itemize}
+\item néha vannak 6 V-os, "levágott fejű" impulzusok
+\item threshold: 40 ch
+\item peaking time: 13 us (20->13); pocsék p/z-vel
+\end{itemize}
+\end{itemize}
+\subsection{Béta spektroszkópia mérőlánc beállításai}
+\begin{itemize}
+\item Detektor
+Gamma gyártmányú, ND-319/g típusú, 92020 gyári számú mérõfej, béta szcintillátorral.
+\item Mérõlánc
+1/10-es frekvenciakompenzált feszültségosztó;
+Canberra gyártmányú, 2012 típusú spektroszkópiaia erõsítõ; 
+negatív bemeneti polaritás, (8*6,0) erõsítés, unip. kimenet.
+\item Analizátor
+Atomki gyártmányú, PalmtopMCA analizátor; 
+10 V-os bemenet, 512 csatorna
+\end{itemize}
+\newpage
 \section{Gamma spektroszkópia}
 \subsection{Szcintillációs detektor}
 \hspace*{10pt} A gamma spektroszkópiai vizsgálatainkat a szcintillációs detektor kalibrálásával kezdtük. Erre azért volt szükség, mert a spektrumokat sokcsatornás analizátor segítségével vettük fel, melynek csatornáihoz a kalibráció segítségével tudtunk energiatartományokat párosítani. A kalibráció során a spektrumokban látható egyes ismert energiájú csúcsokat Gauss-görbével illesztettem, melynek illesztéshez használt alakja:
 $$f(x)=A\cdot e^{-\frac{(x-\mu)^2}{2\cdot \sigma ^2}} + c  .$$
-A $c$ tagot a kontinuumszint figyelembevétele miatt kellett hozzáadnunk a görbéhez. A kalibrációhoz az illesztett görbék közepét (átlagát) kellett vennünk, és kellett összevetnünk a csúcsok ismert energiaértékeivel. A vizsgálat során felvett spektrumok at \ref{fig:1} ., míg az illesztések az \ref{fig:2} . és a \ref{fig:3} . ábrákon láthatók.\\
+A $c$ tagot a kontinuumszint figyelembevétele miatt kellett hozzáadnunk a görbéhez. A mérés jellege miatt a kontinuum exponenciális függvénnyel történő figyelembevétele lett volna a legmegfelelőbb, azonban az így behozott exponenciális tag megnehezítette volna az illesztési eljárást. Emiatt a csúcsok környezetében a kontinuumot közelítőleg lineárisnak tételeztem fel, mellyel becslésem szerint a statisztikus (Poisson) hibánál jóval kisebb hibával terheltem a kiértékelést. A kalibrációhoz az illesztett görbék közepét (átlagát) kellett vennünk, és kellett összevetnünk a csúcsok ismert energiaértékeivel. A vizsgálat során felvett spektrumok at \ref{fig:1} ., míg az illesztések az \ref{fig:2} . és a \ref{fig:3} . ábrákon láthatók.\\
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.60]{szc_spekt}
+\includegraphics[scale=0.53]{szc_spekt}
 \caption{A szcintillációs detektorral 120 s hosszú méréssel kapott spektrumok}
 \label{fig:1}
 \end{figure}
 \newpage
 \begin{figure}[!h]
 \hspace*{-0.75cm}
-\includegraphics[scale=0.60]{Cob_figs}
+\includegraphics[scale=0.53]{Cob_figs}
 \caption{A kobalt spektrumában látható első (1173 keV) és második (1333) csúcs illesztése}
 \label{fig:2}
 \end{figure}
@@ -137,9 +191,9 @@ A szcintillációs detektor segítségével felvettük egy NaCl (háttér) és e
 \newline
 A $^{40}$K-hez tartozó csúcsok és azok illesztései a két spektrum esetében a \ref{fig:6} . ábrán láthatók. Mivel a csúcs környékén a kontiunnum nem volt állandó értékkel közelíthető, ezért a csúcsok illesztése során a Gauss-görbét az alábbi módon egészítettük ki:
 $$f(x)=A\cdot e^{-\frac{(x-\mu)^2}{2\cdot \sigma ^2}} + cx + b  .$$
-A csúcsok intenzitásának arányánál az amplitúdóikat vetettük össze, ez azonban nem egyezik meg az illesztés során használt $A$-val, a Gauss-görbe definíciójából adódóan. Ennek megfelelően
+A csúcsok intenzitásának arányánál az együtthatóikat vetettük össze, ez azonban nem egyezik meg az illesztés során használt $A$-val, a Gauss-görbe definíciójából adódóan. Ennek megfelelően
 $$A=A^{*}\frac{1}{\sqrt{2\pi \sigma}},$$
-ahol $A^{*}$ az általunk használni kívánt amplitúdó érték.
+ahol $A^{*}$ az általunk használni kívánt intenzitás (egyben beütésszám) érték.
 \newpage
 \begin{figure}[!h]
 \centering
@@ -296,4 +350,314 @@ $^{214}$Pb & 295.20 & 296.77\\
 
 A táblázatban látható irodalmi értékeket a [2]-ból írtam ki. A spektrumokban az ábrákon látható módon fel lehet lelni az urán leányelemei által létrehozott csúcsokat, azonban a pontosabb energiaméréshez és a csúcsok jobban láthatóvá tételéhez hosszabb idejű mérésekre lett volna szükség. 
 
+%\newpage
+
+\section{Béta spektroszkópia}
+
+A $\beta$-spektroszkópiával kapott spektrum ellentétnem a $\gamma$-val spektroszkópia során kapott spektrumtól folytonos karakterisztikájú, mivel itt a bomlás során kelektkező neutrínó is energiát, illetve impulzust vihet el. Ennek következtében a kilépő elektron, illetve pozitron energiája tetszőleges értéket vehet fel. Használjuk a következők során a $c=m_e=1$ egységrendszert. Ekkor a következő összefüggés lesz érvényes:
+
+\begin{equation*}
+p^2= W^2 - 1
+\end{equation*}
+
+Amely összefüggésben szereplő W a következőnek adódik:
+
+\begin{equation*}
+W= \dfrac{E}{m_ec^2} + 1
+\end{equation*}
+
+Az egyes energiákon vett intenzitást a következő formula határozza meg:
+
+\begin{equation*}
+N^{\pm}(E)= Kp(E+m_ec^2)(E_m-E)^2F^{\pm}(Z,E)S_n(E)
+\end{equation*}
+
+A $\pm$ a pozitron, illetve az elektronhoz tartozó függvényt jelöli. Az $E_m$ jelöli az átmenethez tartozó teljes energiát, az E pedig a részecske energiáját jelöli. Az $F^{\pm}(Z,E)$ pedig a Fermi-függvény, amely megadja a Z rendszámú atommag hatását a keletkező részecskén. Ezen felül bevezethető a módosított Fermi-függvény a következő módon: 
+
+\begin{equation*}
+G=\frac{p}{W}F(E,Z)
+\end{equation*}
+
+Ezen egyenletekből levezethető az alábbi összefüggés: 
+
+\begin{equation*}
+Q=\sqrt{\dfrac{N}{GW^2}}=\kappa (W_m-W)\sqrt{S_n}
+\end{equation*}
+
+\newpage
+
+\subsection{Kalibráció}
+
+Mérésünkhöz szükség van a műszer kalibrálására, erre ebben a mérésrészben két ismert értéket használunk fel, a $^{137}$Cs keV-nél lévő konverziós elektronból származó csúcsát és műszer 12-es csatorjánál lévő 0-s keV-nek tekintett küszöbszintjét használjuk fel. Ezeket a következő táblázatban foglaljuk össze: 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Csatornaszám (cs) & E[keV] \\ \hline
+11 & 0 \\ \hline
+$85 \pm 1$ & 630 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.30]{kalib2.png}
+\caption{A $\beta$-spektroszkópia kalibrálásához készített egyenesillesztés}
+\label{fig:12}
+\end{figure}
+
+
+Ezekre az adatokra egyenest illesztünk (\ref{fig:12} . ábra), a kapott illesztési paraméterek: 
+\begin{equation*}
+\begin{split}
+m=10.328 \hspace*{5pt} \mathrm{keV/cs}\\ 
+b =-123,934 \hspace*{5pt} \mathrm{keV}
+\end{split}
+\end{equation*}
+Az energia meg kifejezhető a következő módon: 
+
+\begin{equation*}
+E=m\cdot cs+b
+\end{equation*}
+\newpage
+
+\subsection{$^{137}$Cs átmentek meghatározása}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{cz.png}
+\caption{A $^{137}$Cs N(E) grafikonja}
+\label{fig:13}
+\end{figure}
+
+Először a beütésszámot ábrázoltuk az energia függvényében (\ref{fig:13} . ábra), majd a Q-t a W függvényében. Ha a transzformált grafikon konverziós csúcs előtti részére egyenest illesztünk (\ref{fig:14} . ábra), akkor az illesztett egyenes paramétereiből meghatározható az $E_m$. 
+Az illesztett egyenes paraméterei:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{czfit.png}
+\caption{A $^{137}$Cs $\sqrt{N}/W(E)$ grafikonja}
+\label{fig:14}
+\end{figure}
+\newpage
+
+\begin{equation*}
+\begin{split}
+m = -47.600 \pm 0.570\\
+b = 108.518 \pm 0.813
+\end{split}
+\end{equation*}
+
+Ebből következik: 
+
+\begin{equation*}
+W_m = - \dfrac{b}{a} = 2.279 \pm 0.071
+\end{equation*}
+
+Innen meghatározható a $^{137}$Cs-hoz tartozó maximális energia: $$E_{m} = 653 \pm 35\hspace*{5pt}  \mathrm{keV}.$$.
+
+\subsection{$^{90}$Sr átmeneteinek meghatározása}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{srout.png}
+\caption{A $^{90}$Sr N(E) grafikonja}
+\label{fig:15}
+\end{figure}
+
+A stroncium esetében két párhuzamos $\beta$-bomlás zajlik, emiatt ezek az együttes spektrumát látjuk, így ezekhez külön részletekben (\ref{fig:16} . és \ref{fig:17} . ábra) határoztuk meg a maximális energiákat az előző fejezetben említett módon. 
+\newpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{srfit.png}
+\caption{A $^{90}$Sr $\sqrt{N}/W(E)$ grafikonja}
+\label{fig:16}
+\end{figure}
+
+Az első esetben az illesztett egyenes paraméterei:
+
+\begin{equation*}
+\begin{split}
+m =-48.235 \pm 0.744\\
+b = 133.960 \pm 1.126
+\end{split}   
+\end{equation*}
+
+Ebből az energia maximuma a következő lesz: $$E_{m;1} = 915 \pm 50\hspace*{5pt} \mathrm{keV}$$
+%\newpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{srfit2.png}
+\caption{A $^{90}$Sr $\sqrt{N}/W(E)$ grafikonja}
+\label{fig:17}
+\end{figure}
+\newpage
+A másik esetben pedig az illesztett paraméterek a következők lesznek: 
+
+\begin{equation*}
+\begin{split}
+m = -11.465 \pm 0.054\\
+b = 60.357 \pm 0.184
+\end{split}   
+\end{equation*}
+
+Ebből az energia maximumának értéke a következő lesz: $$E_{m;2} = 2179 \pm 41\hspace*{5pt} \mathrm{keV}$$.
+\subsection{Háttér}
+
+Végeztünk egy hosszabb mérést (10 órás) a háttéren. Ennek a grafikonja\\ (\ref{fig:18} . ábra) a következő módon néz ki:
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.60]{hatter.png}
+\caption{A háttér N(E) grafikonja}
+\label{fig:18}
+\end{figure}
+Arra a következtetésre jutottam, hogy a hátteret nem szükséges levonni, mert a statisztikus hiba által okozott eltérés mellett a háttér elhanyagolható, a mérés pontosságát illetően a levonása nem okozna szignifikáns javulást.
+
+
+\newpage
+
+\section{Diszkusszió}
+A mérési feladatokat sikeresen elvégeztük, a mérés, illetve a kiértékelés során kapott eredmények az alábbiakban láthatók. Az eredményeket a [3] honlapon lévő feladatok kitűzésével azonos sorrendben ismertetem.\newline
+\subsection{Szcintillációs gamma kalibrációs paraméterek:}
+\begin{itemize}
+\item $^{60}$Co:
+\begin{center}
+\begin{tabular}{|c|c||c|}
+\hline
+Energia & 1173 keV & 1333 keV \\ 
+\hline
+$A$ & $115.619 \pm 18.067$ & $57.927 \pm 11.078$\\
+\hline
+$\mu$ & $160.286 \pm 0.400$ & $181.849 \pm 0.171$\\
+\hline
+\end{tabular}
+\end{center}
+\item $^{137}$Cs:
+\begin{center}
+
+\begin{tabular}{|c|c|}
+\hline
+Energia & 662 keV \\ 
+\hline
+$A$ & $547.931 \pm 8.419$\\
+\hline
+$\mu$ & $92.557 \pm 0.076$\\
+\hline
+\end{tabular}
+\end{center}
+\item A kalibráció egyenes egyenlete:
+\begin{equation*}
+E(x)=7.522x-33.903
+\end{equation*}
+\end{itemize}
+\subsection{Detektor felbontása}
+\begin{equation*}
+\Delta x=(10.934 \pm 2.475)\mathrm{keV}
+\end{equation*}
+\subsection{NaCl és KCl-al mért K-40 intenzitás arányok}
+\begin{center}
+0.092 $\pm$ 0.012
+\end{center}
+\subsection{HPG gamma kalibrációs paraméterek}
+\begin{itemize}
+\item $^{60}$Co:
+\begin{center}
+\begin{tabular}{|c|c||c|}
+\hline
+Energia & 1173 keV & 1333 keV \\ 
+\hline
+$A$ & $199.211 \pm 4.46$ & $161.513 \pm 3.236$\\
+\hline
+$\mu$ & $1267.263 \pm 0.023$ & $1439.532 \pm 0.02$\\
+\hline
+\end{tabular}
+\end{center}
+\item $^{137}$Cs:
+\begin{center}
+
+\begin{tabular}{|c|c|}
+\hline
+Energia & 662 keV \\ 
+\hline
+$A$ & $172.539 \pm 4.197$\\
+\hline
+$\mu$ & $714.71 \pm 0.017$\\
+\hline
+\end{tabular}
+\end{center}
+\item Kalibrációs egyenes egyenlete:
+\begin{equation*}
+E(x)=0.926x +0.45
+\end{equation*}
+\end{itemize}
+\subsection{HPG felbontóképessége}
+\begin{equation*}
+\Delta x=(1.935 \pm 0.45)\mathrm{keV}
+\end{equation*}
+Összehasonlítva ezt a fenti, szcintillációs detektor felbontására kapott értékkel látszik, hogy a HPG-nek körülbelül 10-szer jobb a felbontása.
+\subsection{U-238 leányelemek azonosítása}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$^{214}$Bi & 609.32 & 610.68\\
+\hline
+$^{214}$Pb & 351.90 & 352.33\\
+\hline
+$^{214}$Pb & 295.20 & 296.77\\ 
+\hline
+\end{tabular}
+\end{center}
+\subsection{Béta szcintillációs kalibrációs egyenes egyenlete}
+\begin{equation*}
+E=(10.3279\cdot cs -123.934) keV
+\end{equation*}
+\subsection{$^{137}$Cs átmenetek}
+\begin{itemize}
+\item{Illesztett egyenes paraméterei:
+\begin{equation*}
+\begin{split}
+m=-47.600\pm 0.570\\
+b=108.518 \pm 0.813
+\end{split}
+\end{equation*}
+}
+\item{$W_m=2.279\pm0.071$}
+\item{$E_m=653\pm 35$ keV}
+\end{itemize}
+\subsection{$^{90}$Sr átmenetek (1. bomlás)}
+\begin{itemize}
+\item{Illesztett egyenes paraméterei:
+\begin{equation*}
+\begin{split}
+m=-48.235\pm 0.744\\
+b=133.960 \pm 1.126
+\end{split}
+\end{equation*}
+}
+\item{$E_m=915\pm 50$ keV}
+\end{itemize}
+\subsection{$^{90}$Sr átmenetek (2. bomlás)}
+\begin{itemize}
+\item{Illesztett egyenes paraméterei:
+\begin{equation*}
+\begin{split}
+m=-11.465\pm 0.054\\
+b=60.357 \pm 0.184
+\end{split}
+\end{equation*}
+}
+\item{$E_m=2179\pm 41$ keV}
+\end{itemize}
+
+\section*{Hivatkozások}
+\hspace*{14pt} [1] : \emph{Félértékszélesség meghatározása}:\\
+\hspace*{34pt} \texttt{http://atomfizika.elte.hu/muszerek/MSP/felertek.pdf}\\
+
+[2] : \emph{Urán leányelemeinek adatai}:\\
+\hspace*{34pt} \texttt{http://atomfizika.elte.hu/muszerek/MSP/Uran\_torium\_sor.png}\\
+
+[3] : \emph{Mérési feladatok}:\\
+\hspace*{34pt} \texttt{http://atomfizika.elte.hu/muszerek/MSP/MSP\_pontok.php}
 \end{document}
